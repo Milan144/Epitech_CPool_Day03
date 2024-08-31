@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int my_print_comb2(void);
 
