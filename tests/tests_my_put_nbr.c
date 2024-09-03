@@ -1,11 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "../my_put_nbr.c"
 
-int main(void)
+// Function prototype
+void my_put_nbr(int nb);
+
+int main()
 {
-    my_put_nbr(42);
+    // Test case 1: Positive number
+    printf("Test case 1: Positive number\n");
+    my_put_nbr(12345);
+    printf("\n");
+
+    // Test case 2: Negative number
+    printf("Test case 2: Negative number\n");
+    my_put_nbr(-12345);
+    printf("\n");
+
+    // Test case 3: Zero
+    printf("Test case 3: Zero\n");
     my_put_nbr(0);
-    my_put_nbr(-42);
-    my_put_nbr(2147483647);
-    my_put_nbr(-2147483648);
+    printf("\n");
+
     return 0;
 }

@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int my_isneg(int n);
+void my_isneg(int n);
 
 int main()
 {
     int number;
-    printf("\nType a number to see if its negative positive or null\n");
+    printf("\nType a number to see if it's negative, positive, or null\n");
 
     scanf("%i", &number);
 
@@ -14,7 +14,7 @@ int main()
     return 0;
 }
 
-int my_isneg(int n)
+void my_isneg(int n)
 {
     char *positiveNegativeOrNull = "";
 
@@ -31,6 +31,5 @@ int my_isneg(int n)
         positiveNegativeOrNull = "NULL";
     }
 
-    return printf("The number is %s\n", positiveNegativeOrNull);
+    puts(positiveNegativeOrNull);
 }
-

@@ -5,8 +5,6 @@ int my_print_digits(void);
 
 int main()
 {
-    printf("\nPrinting digits\n");
-
     my_print_digits();
 
     return 0;

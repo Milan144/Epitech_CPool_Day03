@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int my_print_revalpha(void);
+void my_print_revalpha(void);
 
 int main()
 {
@@ -12,14 +12,12 @@ int main()
   return 0;
 }
 
-int my_print_revalpha(void)
+void my_print_revalpha(void)
 {
   char *alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-  for (int i = strlen(alphabet); i >= 0; i--)
+  for (int i = strlen(alphabet) - 1; i >= 0; i--)
   {
-    printf("%c", alphabet[i]);
+    putchar(alphabet[i]);
   }
-
-  return 0;
 }

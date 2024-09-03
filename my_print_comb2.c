@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int my_print_comb2(void);
+void my_print_comb2(void);
 
 int main()
 {
@@ -11,14 +11,23 @@ int main()
     return 0;
 }
 
-int my_print_comb2(void)
+void my_print_comb2(void)
 {
+    char combinations[100]; // Assuming a maximum of 100 combinations
+    int index = 0;
+
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
         {
-            printf("%i%i, ", i, j);
+            combinations[index++] = '0' + i;
+            combinations[index++] = '0' + j;
+            combinations[index++] = ',';
+            combinations[index++] = ' ';
         }
     }
-    return 0;
+
+    combinations[index - 2] = '\0'; // Replace the last comma and space with null terminator
+
+    printf("%s\n", combinations);
 }

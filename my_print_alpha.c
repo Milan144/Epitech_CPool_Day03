@@ -12,10 +12,10 @@ int main() {
 }
 
 int my_print_alpha(void) {
-  char *alphabet = "abcdefghijklmnopqrstuvwxyz";
+  char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
 
   for (int i = 0; i < strlen(alphabet); i++) {
-    printf("%c", alphabet[i]);
+    putchar(alphabet[i]);
   }
 
   return 0;

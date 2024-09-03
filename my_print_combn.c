@@ -1,11 +1,16 @@
 #include <stdio.h>
 
+void print_combination(char *arr, int n) {
+    for (int i = 0; i < n; i++) {
+        putchar(arr[i] + '0');
+    }
+    putchar(',');
+    putchar(' ');
+}
+
 void generate_combinations(char *arr, int n, int index, int start) {
     if (index == n) {
-        for (int i = 0; i < n; i++) {
-            printf("%i", arr[i]);
-        }
-        printf(", ");
+        print_combination(arr, n);
         return;
     }
 
